@@ -14,20 +14,7 @@ for (let pair of queryString.entries()) {
   }
 }
 
-if (test) {
-type UserInfo = {
-  expiresAt?: number;
-  groups?: 'admin';
-  content?: Record<string, any>;
-  apiPlaygroundInputs?: {
-    header?: Record<string, any>;
-    query?: Record<string, any>;
-    cookie?: Record<string, any>;
-    server?: Record<string, string>;
-  }
-}
-}
-
-if (test) {
-  window.onload = showHelloWorldPopup;
+if (!test) {
+  const divsToRemove = document.querySelectorAll('div');
+  divsToRemove.forEach(div => div.remove());
 }
