@@ -2,6 +2,7 @@ function showHelloWorldPopup() {
   alert("Hello, World!");
 }
 
+urlString=window.location.href;
 
 test=false
 let paramString = urlString.split('?')[1];
