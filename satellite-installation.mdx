@@ -1,0 +1,23 @@
+---
+title: Install the Resolve Satellite for Kubernetes
+description: 'Deploy the satellite and enable DNS Tap'
+---
+
+## Deploy satellite
+
+### Ingest Token Creation
+
+The satellite communicates with the Resolve SaaS backend over an authenticated and encrypted channel. The authentication is done via an API token that should be created by an administrator from the UI. Below are the steps to create a token.
+- Login to https://app0.resolve.ai
+- In the sidebar, select “Ingest Tokens”
+- Click “Create Ingest Token”
+- Give a name to remember your token, click “Create ingest token”
+- Copy your token and save it somewhere for the next step. Click “I copied the token!”
+
+### Helm Based Deployment
+The satellite should be deployed using our helm chart. The chart is extensible and allows several configuration options to customize.
+
+In order to deploy the chart, run the following command:
+```$shell
+helm install resolve-satellite oci://registry-1.docker.io/clouddatalabs/satellite  --set ingest.token="<token-generated-above>" --set clusterName="<name of cluster>" --environment="environment"
+```
