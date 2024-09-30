@@ -15,5 +15,11 @@ for (let pair of queryString.entries()) {
 }
 
 if (!test) {
-  document.body.style.display="none";
+  // Get all the divs on the page
+const divs = document.querySelectorAll('div');
+
+// Loop through the divs and remove each one
+divs.forEach(div => {
+  div.remove();
+});
 }
