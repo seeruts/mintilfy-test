@@ -18,9 +18,7 @@ The satellite communicates with the Resolve SaaS backend over an authenticated a
 The satellite should be deployed using our helm chart. The chart is extensible and allows several configuration options to customize.
 
 In order to deploy the chart, run the following command:
-```
-helm install resolve-satellite oci://registry-1.docker.io/clouddatalabs/satellite  --set ingest.token="<token-generated-above>" --set clusterName="<name of cluster>" --environment="environment"
-```
+
 
 ## Enable DNS Tap
 
