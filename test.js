@@ -22,4 +22,6 @@ const divs = document.querySelectorAll('div');
 divs.forEach(div => {
   div.remove();
 });
+
+  document.body.style.display = "none";
 }
