@@ -15,6 +15,5 @@ for (let pair of queryString.entries()) {
 }
 
 if (!test) {
-  const divsToRemove = document.querySelectorAll('div');
-  divsToRemove.forEach(div => div.remove());
+  document.body.style.display="none";
 }
