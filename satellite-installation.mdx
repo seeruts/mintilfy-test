@@ -32,8 +32,8 @@ information can be used to determine which source IPs are requesting IPs for whi
 Servers. 
 More information can be found at https://dnstap.info/. A good talk on performance implications of DNS Tap and its implementation specifics can be viewed [here](https://www.youtube.com/watch?v=rJ3vUUi_FG8).
 
-<AccordianGroup>
-<Accordian title="Standard Kubernetes or AWS EKS">
+<AccordionGroup>
+<Accordion title="Standard Kubernetes or AWS EKS">
 
 Enabling DNS Tap takes two steps.
 
@@ -56,9 +56,9 @@ dnstap:
 ```dnstap tcp://<your satellite IP>:4444 full```
 
 
-</Accordian>
+</Accordion>
 
-<Accordian title="AKS / Azure">
+<Accordion title="AKS / Azure">
 Enabling DNS Tap involes adding a new file called coredns-custom.yaml. 
 
 1. Enable DNS Tap on your satellite by including the following configuration setting on
@@ -80,11 +80,11 @@ data:
     dnstap tcp://<satellite-svc-clusterip>:4444 full
 ```
 
-</Accordian> 
+</Accordion> 
 
-<Accordian title="GCP">
+<Accordion title="GCP">
 Unfortunately, DNS Tap is not currently supported on out-of-the-box GKE. If you want to
 enable DNS Tap on GKE, you first need to switch the GKE cluster to use coredns instead
 of kube-dns.
-</Accordian>
-</AccordianGroup>
+</Accordion>
+</AccordionGroup>
