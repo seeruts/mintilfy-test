@@ -58,6 +58,12 @@
       ]
     },
     {
+      "group": "New mdx",
+      "pages": [
+        "testing-a-new-mdx"
+      ]
+    },
+    {
       "group": "Essentials",
       "pages": [
         "essentials/markdown",
